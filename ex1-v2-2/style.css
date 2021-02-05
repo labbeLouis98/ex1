@@ -227,7 +227,7 @@ p {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: #5858f8;
 }
 
 .annonce1 {
@@ -272,6 +272,6 @@ p {
 }
 
 .principal section h3 {
-  background-color: blue;
+  background-color: #1ecf9a;
 }
 /*# sourceMappingURL=style.css.map */
