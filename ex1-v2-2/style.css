@@ -20,6 +20,19 @@ animations
   }
 }
 
+.animation-p h3 {
+  animation: anim-principal 1s both cubic-bezier(0.27, 0.2, 0.9, 0.34);
+}
+
+@keyframes anim-principal {
+  0% {
+    transform: translateY(-250px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /*
 .animation div:nth-of-type(1){
 animation-delay: .5s;
@@ -59,6 +72,26 @@ animation-delay: .5s;
 }
 
 .animation div:nth-of-type(5) {
+  animation-delay: 2.5s;
+}
+
+.animation-p h3:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.animation-p h3:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.animation-p h3:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+
+.animation-p h3:nth-of-type(4) {
+  animation-delay: 2s;
+}
+
+.animation-p h3:nth-of-type(5) {
   animation-delay: 2.5s;
 }
 
@@ -174,31 +207,6 @@ p {
   grid-area: pied-page;
 }
 
-/*
-.entete{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    section{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: blue;
-        }
-
-    }
-
-}
-*/
 .entete {
   display: flex;
   flex-direction: row;
@@ -253,5 +261,17 @@ p {
 .principal {
   display: grid;
   place-items: center;
+  justify-content: center;
+}
+
+.principal section {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+
+.principal section h3 {
+  background-color: blue;
 }
 /*# sourceMappingURL=style.css.map */

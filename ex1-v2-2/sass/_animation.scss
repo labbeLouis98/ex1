@@ -8,6 +8,17 @@
     100% {transform: translateX(0);}
 }
 
+
+.animation-p h3{
+
+    animation: anim-principal 1s both cubic-bezier(.27,.2,.9,.34);
+}
+
+@keyframes anim-principal {
+    0% {transform: translateY(-250px);}
+    100% {transform: translateY(0);}
+}
+
 /*
 .animation div:nth-of-type(1){
 animation-delay: .5s;
@@ -34,6 +45,13 @@ animation-delay: .5s;
 $columns: 5;
 @for $i from 1 through $columns {
     .animation div:nth-of-type(#{$i}) {
+        animation-delay: ($i*.5s);
+    }
+}
+
+$columns: 5;
+@for $i from 1 through $columns {
+    .animation-p h3:nth-of-type(#{$i}) {
         animation-delay: ($i*.5s);
     }
 }

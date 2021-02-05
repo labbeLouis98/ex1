@@ -121,32 +121,6 @@ p {
     grid-area: pied-page;
 }
 
-/*
-.entete{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    section{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: blue;
-        }
-
-    }
-
-}
-*/
-
 .entete {
     display: flex;
     flex-direction: row;
@@ -170,7 +144,6 @@ p {
         }
     }
 }
-
 
 .annonce1 {
     background-color: #efebc5;
@@ -204,5 +177,15 @@ p {
 .principal {
     display: grid;
     place-items: center;
-
+    justify-content: center;
+    section{
+        display: flex;
+        flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    
+    h3{
+        background-color: blue;
+    }
+}
 }
