@@ -5,20 +5,31 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     // background-color: rgb(179, 179, 204);
     background-color: #fff;
 
+ }
+
+@include desktop{
+body {
+    
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    
+
+ }
 }
 
 
-body::after {
-    content: "";
-    clip-path: polygon(0 0, 80% 0, 50% 100%, 0 100%);
-    //background-color: rgb(43, 71, 233);
-    background-color: couleur(primaire);
+@include desktop{
+    body::after   {
+        content: "";
+        clip-path: polygon(0 0, 80% 0, 50% 100%, 0 100%);
+        background-color: couleur(primaire);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -27,6 +38,8 @@ body::after {
     left: 0;
     right: 0;
     z-index: -1;
+    }
+    
 }
 
 h1 {
@@ -58,9 +71,9 @@ p {
 }
 
 .bloc {
-    border: 1px solid #666;
+    
     background-color: transparent;
-    color: wheat;
+    color: rgb(31, 166, 255);
     font-size: 3rem;
     margin-left: 0;
     display: flex;
@@ -79,6 +92,7 @@ p {
 .grille {
     display: grid;
     width: 80%;
+    height: 90%;
     margin: 0 auto;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -94,7 +108,7 @@ p {
         grid-template-areas:
             "entete entete entete"
             "menu menu menu"
-            "principal annonce1 annonce1"
+            "principal principal annonce1"
             "pied-page pied-page pied-page";
     }
 }
@@ -105,6 +119,7 @@ p {
 
 .menu {
     grid-area: menu;
+    margin: 0 auto;
 
 }
 
@@ -119,6 +134,8 @@ p {
 
 .pied-page {
     grid-area: pied-page;
+    color: black;
+    margin: 0 auto;
 }
 
 .entete {
@@ -130,7 +147,7 @@ p {
         display: flex;
         flex-direction: row;
         align-items: center;
-            justify-content: center;
+        justify-content: center;
 
 
         div {
@@ -140,12 +157,14 @@ p {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: rgb(88, 88, 248);
+            background-color: rgb(255, 215, 154);
         }
     }
 }
 
+
 .annonce1 {
+
     background-color: #efebc5;
     color: #5e6e81;
     border-radius: 10px;
@@ -154,38 +173,50 @@ p {
     margin: 20px;
 
     div {
-        font-size: .4em;
+        font-size: .7rem;
         display: flex;
         align-items: center;
+        img{
+            width: 45px;
+            height: 45px;
+        }
+    }
+    @include desktop{
+        div {
+            font-size: 1rem;
+    
+            img{
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+
+
     }
 }
 
-.annonce2 {
-    padding: 42px;
-    margin: 20px;
-    background-color: #efebc5;
-    color: #1c2127;
-
-    section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-}
 
 .principal {
+    
     display: grid;
     place-items: center;
-    justify-content: center;
+    
     section{
+        background-color: #efebc5;
+        color: grey;
+    border-radius: 15%;
         display: flex;
         flex-direction: column;
     place-items: center;
     justify-content: center;
     
     h3{
-        background-color: rgb(30, 207, 154);
+        /*background-color: rgb(30, 207, 154);*/
+        border-radius: 40%;
+        margin: 10px;
+        padding: 10px;
+        
     }
 }
 }
