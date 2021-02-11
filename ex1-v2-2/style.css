@@ -132,13 +132,21 @@ p {
 }
 
 .bloc {
-  background-color: transparent;
-  color: #1fa6ff;
-  font-size: 3rem;
-  margin-left: 0;
+  background-color: #555555;
+  color: #f4faff;
+  font-size: 1rem;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+@media (min-width: 1000px) {
+  .bloc {
+    font-size: 3rem;
+    background-color: transparent;
+    justify-content: flex-start;
+  }
 }
 
 .bloc img {
@@ -151,16 +159,19 @@ p {
 
 .grille {
   display: grid;
-  width: 80%;
-  height: 90%;
+  width: 90%;
+  height: 100%;
   margin: 0 auto;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "entete entete entete" "menu menu menu" "annonce1 annonce1 annonce1" "principal principal principal" "pied-page pied-page pied-page";
 }
 
 @media (min-width: 1000px) {
   .grille {
+    width: 80%;
+    height: 100%;
+    grid-gap: 20px;
     grid-template-areas: "entete entete entete" "menu menu menu" "principal principal annonce1" "pied-page pied-page pied-page";
   }
 }
@@ -188,6 +199,10 @@ p {
   margin: 0 auto;
 }
 
+.pied-page h3 {
+  font-size: 1rem;
+}
+
 .entete {
   display: flex;
   flex-direction: row;
@@ -205,10 +220,17 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background-color: #ffd79a;
+  background-color: #00a3cc;
+}
+
+@media (min-width: 1000px) {
+  .entete section div {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .annonce1 {
@@ -249,7 +271,7 @@ p {
 .principal section {
   background-color: #efebc5;
   color: grey;
-  border-radius: 15%;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -261,5 +283,23 @@ p {
   border-radius: 40%;
   margin: 10px;
   padding: 10px;
+  justify-content: center;
+  place-items: center;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 1000px) {
+  .principal {
+    border-radius: 15%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pied-page h3 {
+    padding: 5px;
+    color: white;
+    background-color: #00a3cc;
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
