@@ -18,8 +18,12 @@
 }
 
 @keyframes anim-principal {
-    0% {transform: translateX(-1000px);}
-    100% {transform: translateX(0);}
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 

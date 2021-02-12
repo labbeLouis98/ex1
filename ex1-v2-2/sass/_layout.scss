@@ -129,7 +129,6 @@ p {
 .menu {
     grid-area: menu;
     margin: 0 auto;
-
     padding: 8px;
 }
 
@@ -214,8 +213,8 @@ p {
     box-shadow: 7px 3px 11px 4px rgb(0, 163, 204);
     padding: 20px;
     margin: 20px;
-
-
+    justify-content: center;
+    align-items: center;
 
     div {
         font-size: .7rem;
@@ -233,8 +232,8 @@ p {
             font-size: 1rem;
 
             img {
-                width: 45px;
-                height: 45px;
+                width: 100px;
+                height: 100px;
             }
         }
     }
@@ -252,7 +251,6 @@ p {
 
     display: grid;
     place-items: center;
-
     section {
         background-color: rgb(0, 163, 204);
         color: white;
@@ -261,7 +259,6 @@ p {
         flex-direction: column;
         place-items: center;
         justify-content: center;
-
 
         h3 {
             /*background-color: rgb(30, 207, 154);*/
@@ -277,7 +274,7 @@ p {
 
 @include desktop {
     .principal {
-        background-color: #ffffff;
+        /*background-color: #ffffff; */
         border-radius: 15%;
 
         section {
