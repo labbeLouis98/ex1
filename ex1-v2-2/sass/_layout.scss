@@ -66,7 +66,7 @@ p {
 }
 
 .bloc {
-    background-color: rgb(85, 85, 85);
+    background-color: couleur(primaire);
     color: rgb(244, 250, 255);
     font-size: 1rem;
     margin: 0 auto;
@@ -100,6 +100,7 @@ p {
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
 
+
     grid-template-areas:
         "entete entete entete"
         "menu menu menu"
@@ -122,11 +123,32 @@ p {
 
 .entete {
     grid-area: entete;
+    background-color: transparent;
 }
 
 .menu {
     grid-area: menu;
     margin: 0 auto;
+
+    padding: 8px;
+}
+
+.menu:hover {
+    color: white;
+    background-color: rgb(0, 163, 204);
+}
+
+@include desktop {
+    .menu {
+        padding: none;
+        background-color: transparent;
+    }
+
+    .menu:hover {
+        color: rgb(0, 163, 204);
+        background-color: transparent;
+    }
+
 }
 
 .annonce1 {
@@ -142,11 +164,14 @@ p {
     grid-area: pied-page;
     color: black;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
 
-    h3{
+    h3 {
         font-size: 1rem;
     }
-    
+
 }
 
 .entete {
@@ -168,10 +193,12 @@ p {
             height: 35px;
             border-radius: 50%;
             background-color: rgb(0, 163, 204);
+            margin: 1px;
         }
 
         @include desktop {
             div {
+                margin: 10px;
                 width: 50px;
                 height: 50px;
             }
@@ -181,12 +208,14 @@ p {
 
 .annonce1 {
 
-    background-color: #efebc5;
-    color: #5e6e81;
+    background-color: couleur(primaire);
+    color: rgb(0, 163, 204);
     border-radius: 10px;
-    box-shadow: 7px 3px 11px 4px #757472;
-    padding: 42px;
+    box-shadow: 7px 3px 11px 4px rgb(0, 163, 204);
+    padding: 20px;
     margin: 20px;
+
+
 
     div {
         font-size: .7rem;
@@ -202,11 +231,19 @@ p {
     @include desktop {
         div {
             font-size: 1rem;
+
             img {
                 width: 45px;
                 height: 45px;
             }
         }
+    }
+}
+
+@include desktop {
+    .annonce1 {
+        padding: 42px;
+        margin: 20px;
     }
 }
 
@@ -217,14 +254,14 @@ p {
     place-items: center;
 
     section {
-        background-color: #efebc5;
-        color: grey;
+        background-color: rgb(0, 163, 204);
+        color: white;
         border-radius: 0;
         display: flex;
         flex-direction: column;
         place-items: center;
         justify-content: center;
-        
+
 
         h3 {
             /*background-color: rgb(30, 207, 154);*/
@@ -233,28 +270,38 @@ p {
             padding: 10px;
             justify-content: center;
             place-items: center;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
     }
 }
 
-@include desktop{
-    .principal{
-        
+@include desktop {
+    .principal {
+        background-color: #ffffff;
         border-radius: 15%;
+
+        section {
+            background-color: transparent;
+            color: rgb(0, 163, 204);
+
+            h3 {
+                font-size: 2rem;
+            }
+
+        }
     }
 }
 
-@include desktop{
+@include desktop {
 
-    .pied-page{
+    .pied-page {
 
-        h3{
+        h3 {
             padding: 5px;
             color: white;
-            background-color:rgb(0, 163, 204);
+            background-color: rgb(0, 163, 204);
             font-size: 2rem;
         }
-        
+
     }
 }

@@ -13,23 +13,24 @@ animations
 
 @keyframes anim-entete {
   0% {
-    transform: translateX(500px);
+    transform: translateY(-500px);
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
+/* anim desktop on */
 @media (min-width: 1000px) {
   .animation-p h3 {
     animation: anim-principal 1s both cubic-bezier(0.27, 0.2, 0.9, 0.34);
   }
   @keyframes anim-principal {
     0% {
-      transform: translateY(-250px);
+      transform: translateX(-1000px);
     }
     100% {
-      transform: translateY(0);
+      transform: translateX(0);
     }
   }
   .animation div:nth-of-type(1) {
@@ -48,19 +49,19 @@ animations
     animation-delay: 2.5s;
   }
   .animation-p h3:nth-of-type(1) {
-    animation-delay: 0.5s;
+    animation-delay: 0.7s;
   }
   .animation-p h3:nth-of-type(2) {
-    animation-delay: 1s;
+    animation-delay: 1.4s;
   }
   .animation-p h3:nth-of-type(3) {
-    animation-delay: 1.5s;
+    animation-delay: 2.1s;
   }
   .animation-p h3:nth-of-type(4) {
-    animation-delay: 2s;
+    animation-delay: 2.8s;
   }
   .animation-p h3:nth-of-type(5) {
-    animation-delay: 2.5s;
+    animation-delay: 3.5s;
   }
 }
 
@@ -132,7 +133,7 @@ p {
 }
 
 .bloc {
-  background-color: #555555;
+  background-color: #181a1d;
   color: #f4faff;
   font-size: 1rem;
   margin: 0 auto;
@@ -178,11 +179,29 @@ p {
 
 .entete {
   grid-area: entete;
+  background-color: transparent;
 }
 
 .menu {
   grid-area: menu;
   margin: 0 auto;
+  padding: 8px;
+}
+
+.menu:hover {
+  color: white;
+  background-color: #00a3cc;
+}
+
+@media (min-width: 1000px) {
+  .menu {
+    padding: none;
+    background-color: transparent;
+  }
+  .menu:hover {
+    color: #00a3cc;
+    background-color: transparent;
+  }
 }
 
 .annonce1 {
@@ -197,6 +216,9 @@ p {
   grid-area: pied-page;
   color: black;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
 
 .pied-page h3 {
@@ -224,21 +246,23 @@ p {
   height: 35px;
   border-radius: 50%;
   background-color: #00a3cc;
+  margin: 1px;
 }
 
 @media (min-width: 1000px) {
   .entete section div {
+    margin: 10px;
     width: 50px;
     height: 50px;
   }
 }
 
 .annonce1 {
-  background-color: #efebc5;
-  color: #5e6e81;
+  background-color: #181a1d;
+  color: #00a3cc;
   border-radius: 10px;
-  box-shadow: 7px 3px 11px 4px #757472;
-  padding: 42px;
+  box-shadow: 7px 3px 11px 4px #00a3cc;
+  padding: 20px;
   margin: 20px;
 }
 
@@ -263,14 +287,21 @@ p {
   }
 }
 
+@media (min-width: 1000px) {
+  .annonce1 {
+    padding: 42px;
+    margin: 20px;
+  }
+}
+
 .principal {
   display: grid;
   place-items: center;
 }
 
 .principal section {
-  background-color: #efebc5;
-  color: grey;
+  background-color: #00a3cc;
+  color: white;
   border-radius: 0;
   display: flex;
   flex-direction: column;
@@ -285,12 +316,20 @@ p {
   padding: 10px;
   justify-content: center;
   place-items: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 1000px) {
   .principal {
+    background-color: #ffffff;
     border-radius: 15%;
+  }
+  .principal section {
+    background-color: transparent;
+    color: #00a3cc;
+  }
+  .principal section h3 {
+    font-size: 2rem;
   }
 }
 
